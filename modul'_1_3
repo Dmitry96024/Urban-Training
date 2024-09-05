@@ -1,0 +1,40 @@
+name="Dmitriy"
+print("Name:",name)
+age=32
+print("Age:",age)
+# по заданию я понял присвоение работает как то так:
+age= age+1
+print("New Age:",age)
+is_student=True
+print("Is Student:",is_student)
+# вывод сделанный с указанием типа данных, выглядит так:
+# Name: Dmitriy <class 'str'>
+# Age: 32 <class 'int'>
+# New Age 33 <class 'int'>
+# Is Student True <class 'bool'>
+#
+# Небольшое отвлечение от темы.
+# Я так понимаю что с классом 'bool' присвоение работает немного по другому принципу:
+# ну и с 'str' немного поиграл
+print("-----------")
+print("Игра с 'str'")
+name="Dmitriy"
+name="Yuzhanin "+name + " Aleksandrovich"
+print('FIO:', name)
+print("Динамическая типизация class 'bool'")
+a=0
+is_student= bool (a)
+print("Is Student:",is_student)
+is_student= bool (a+1)
+print("New_status_Student:",is_student)
+# после чего вывод выглядит так:
+# Name: Dmitriy
+# Age: 32
+# New Age: 33
+# Is Student: True
+# -----------
+# Игра с 'str'
+# FIO: Yuzhanin Dmitriy Aleksandrovich
+# Динамическая типизация class 'bool'
+# Is Student: False
+# New_status_Student: True
