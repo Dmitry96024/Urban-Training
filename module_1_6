@@ -1,0 +1,23 @@
+my_dict={"Dmitriy":1992, "Alex":2011, "Diana":2013} #Имя:Год рождения
+print(my_dict)
+print(my_dict['Alex'])
+my_dict.update({'Yujiya':1988,
+                'Tatyana':1955})
+print(my_dict)
+#Можно так:
+#del my_dict ["Diana"]
+#print(my_dict)
+#или так, что-бы вывести данную пару то тогда
+a=my_dict["Diana"]
+my_dict.pop('Diana')
+print(my_dict)
+print("Была удалена пара: ","'","Diana:", a,"'")
+
+my_set={1,1,1,2,2,2,True,True,"string","string"}
+my_set=set(my_set)
+print(my_set)
+print(my_set.add(5))
+print(my_set.add("new_string"))
+print(my_set)
+print(my_set.remove(1))
+print(my_set)
