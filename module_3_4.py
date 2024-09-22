@@ -17,7 +17,7 @@ def single_root_words(root_word, *other_words):
     for w in range(len(root)):
         if root_word.lower() in root[w].lower() or root[w].lower() in root_word.lower():
             same_words.append(root[w])
-    return (same_words)
+    return same_words
 
 #Вызовите функцию single_root_words и выведете на экран(консоль) возвращённое ей значение.
 
