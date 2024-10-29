@@ -141,7 +141,7 @@ class Triangle(Figure):
         self.sides = sides
         p = (self.sides[0] + self.sides[1] + self.sides[2]) / 2
         self.__height = 2 * (sqrt(p * (p - self.sides[0]) * (p - self.sides[1]) * (p - self.sides[2]))) / self.sides[0]
-        #print(self.__height, "высота")
+        print(self.__height, "высота")
 
     def get_square(self):
         St = (self.__height * self.sides[0]) / 2
