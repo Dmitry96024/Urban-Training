@@ -23,11 +23,10 @@ str3 = text[2]
 str3.insert(5, score_2)
 
 str4 = text[3]
-time = (team2_time/score_2)
-str4.insert(5, time)
-if time%10 == 1:
+str4.insert(5, team2_time)
+if team2_time%10 == 1:
     str4[6]='секунду'
-elif (time%10==2 or time%10==3 or time%10==4):
+elif (team2_time%10==2 or team2_time%10==3 or team2_time%10==4):
     str4[5]='секунды'
 
 str5 = text[4]
@@ -37,7 +36,6 @@ if score_2%10== 1:
     str5[5]='задачу'
 elif (score_2%10==2 or score_2%10==3 or score_2%10==4):
     str5[5]='задачи'
-
 str6 = text[5]
 if score_1 > score_2 or score_1 == score_2 and team1_time > team2_time:
     challenge_result = 'Победа команды Мастера кода!'
@@ -47,18 +45,19 @@ else:
     challenge_result = 'Ничья!'
 str6.insert(2, challenge_result)
 
-
-string_list1 = [str(element) for element in str1]
-string_list2 = [str(element) for element in str2]
-string_list3 = [str(element) for element in str3]
-string_list4 = [str(element) for element in str4]
-string_list5 = [str(element) for element in str5]
-string_list6 = [str(element) for element in str6]
-delimiter = " "
-
-print(delimiter.join(string_list1))
-print(delimiter.join(string_list2))
-print(delimiter.join(string_list3))
-print(delimiter.join(string_list4))
-print(delimiter.join(string_list5))
-print(delimiter.join(string_list6))
+str7=text[6]
+summa_zadach = score_1 + score_2
+summa_time = team1_time + team2_time
+sr_time_na_1_zadacu = summa_time/ summa_zadach
+str7.insert(3, summa_zadach)
+str7.insert(8, sr_time_na_1_zadacu)
+if summa_zadach%10== 1:
+    str7[4]='задачу,'
+elif (summa_zadach%10==2 or score_2%10==3 or score_2%10==4):
+    str7[4]='задачи,'
+else:
+    str7[4] = 'задач,'
+if sr_time_na_1_zadacu%10 == 1:
+    str7[9]='секунду'
+elif (sr_time_na_1_zadacu%10==2 or sr_time_na_1_zadacu%10==3 or sr_time_na_1_zadacu%10==4):
+    str7[9]='секунды'
