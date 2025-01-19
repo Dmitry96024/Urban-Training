@@ -17,11 +17,11 @@ kl.add(button2)
 
 
 kb = InlineKeyboardMarkup(resize_keyboard=True)
-button_ = InlineKeyboardButton(text='Продукт 1', callback_data='product_buying')
+button_1 = InlineKeyboardButton(text='Продукт 1', callback_data='product_buying')
 button_2 = InlineKeyboardButton(text='Продукт 2', callback_data='product_buying')
 button_3 = InlineKeyboardButton(text='Продукт 3', callback_data='product_buying')
 button_4 = InlineKeyboardButton(text='Продукт 4', callback_data='product_buying')
-kb.insert(button_)
+kb.insert(button_1)
 kb.insert(button_2)
 kb.insert(button_3)
 kb.insert(button_4)
