@@ -17,9 +17,17 @@ class UserState(StatesGroup):
 kb = ReplyKeyboardMarkup(resize_keyboard=True, input_field_placeholder="Воспользуйтесь меню:")
 button = KeyboardButton(text = 'Рассчитать')
 button2 = KeyboardButton(text = 'Информация')
-kb_list = (button, button2)
+#kb_list = (button, button2)
 kb.add(button)
 kb.add(button2)
+start_menu = ReplyKeyboardMarkup(
+    keyboard=[
+        [
+            KeyboardButton(text = 'Рассчитать'),
+            KeyboardButton(text = 'Информация')  
+        ]
+    ], resize_keyboard=True
+)
 
 @dp.message_handler(text='Привет')
 async def start(message):
@@ -27,7 +35,7 @@ async def start(message):
 
 @dp.message_handler(commands = ["start"])                  # перехватывает определенные комады после "/"
 async def start(message):
-    await message.answer("Я бот помогающий твоему здоровью", reply_markup=kb)
+    await message.answer("Я бот помогающий твоему здоровью", reply_markup=start_menu)
 
 
 @dp.message_handler(text = 'Информация')
